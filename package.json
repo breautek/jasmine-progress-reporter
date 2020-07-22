@@ -1,0 +1,42 @@
+{
+  "name": "@breautek/jasmine-progress-reporter",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/api.js",
+  "types": "lib/api.d.ts",
+  "scripts": {
+    "build": "npm run lint && tsc",
+    "docs": "typedoc --options typedoc.json",
+    "lint": "node --max_old_space_size=6144 ./node_modules/eslint/bin/eslint.js --ext .ts '?(src|spec)/**/*.ts' --cache",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "changelog": "auto-changelog --output CHANGELOG.md -p --release-summary --ignore-commit-pattern chore --issue-pattern '[A-Z]+-\\d+' --issue-url https://totalpave.atlassian.net/browse/{id}",
+    "preversion": "npm run build",
+    "version": "npm run docs && npm run changelog && git add CHANGELOG.md docs && git commit -m 'chore: changelog'",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breautek/jasmine-progress-reporter.git"
+  },
+  "author": "norman@normanbreau.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/breautek/jasmine-progress-reporter/issues"
+  },
+  "homepage": "https://github.com/breautek/jasmine-progress-reporter#readme",
+  "dependencies": {
+    "cli-progress": "3.8.2",
+    "tslib": "2.0.0"
+  },
+  "devDependencies": {
+    "@totalpave/eslint-plugin": "4.0.0-alpha.1",
+    "@types/cli-progress": "3.7.0",
+    "@types/jasmine": "3.5.11",
+    "@types/node": "14.0.24",
+    "@typescript-eslint/eslint-plugin": "3.7.0",
+    "@typescript-eslint/parser": "3.7.0",
+    "eslint": "7.5.0",
+    "jasmine": "3.5.0",
+    "typescript": "3.9.7"
+  }
+}
