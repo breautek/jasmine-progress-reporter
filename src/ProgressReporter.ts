@@ -31,7 +31,7 @@ export class ProgressReporter implements jasmine.CustomReporter {
     }
 
     public jasmineDone(runDetails: IRunDetails): void {
-        this._progress.stop;
+        this._progress.stop();
         console.log('');
         console.log(`Test ${runDetails.overallStatus} after ${this._formatDuration(runDetails.totalTime)}.`);
         console.log('');
