@@ -1,6 +1,6 @@
 {
   "name": "@breautek/jasmine-progress-reporter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "lib/api.js",
   "types": "lib/api.d.ts",
@@ -37,6 +37,7 @@
     "@typescript-eslint/parser": "3.9.0",
     "eslint": "7.6.0",
     "jasmine": "3.6.1",
+    "typedoc": "0.18.0",
     "typescript": "3.9.7"
   }
 }
